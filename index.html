@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="counting.css" type="text/css" media="all">
+    <title>Посчитайка</title>
+</head>
+
+<body>
+    <div class="consol">
+
+        <header>
+            <div class="header">
+                <div id="countdown" class="countdown">
+                    <div class="countdown-number" title="Время до окончания игры">
+                        <span class="minutes"></span>
+                        <span class="countdown-text">:</span>
+                        <span class="seconds"></span>
+                        <span class="countdown-text"></span>
+                    </div>
+                </div>
+                <div id="deadline-message" class="deadline-message">
+                    Время закончилось!
+                </div>
+                <h2 class="header-liner"> "Посчитайка" </h2>
+            </div>
+        </header>
+
+        <main>
+            <div class="content-main">
+                <div class="block-modal">
+                    <div class="modal" id="modal-1">1 уровень
+                        <p class="text" id="text-1"></p>
+                    </div>
+                    <div class="modal" id="modal-2">2 уровень
+                        <p class="text" id="text-2"></p>
+                    </div>
+                    <div class="modal" id="modal-3">3 уровень
+                        <p class="text" id="text-3"></p>
+                    </div>
+                    <div class="modal" id="modal-4">4 уровень
+                        <p class="text" id="text-4"></p>
+                    </div>
+                    <div class="modal" id="modal-5">5 уровень
+                        <p class="text" id="text-5"></p>
+                    </div>
+                </div>
+
+                <div class="block-modal">
+                    <div class="modal" id="modal-6">6 уровень
+                        <p class="text" id="text-6"></p>
+                    </div>
+                    <div class="modal" id="modal-7">7 уровень
+                        <p class="text" id="text-7"></p>
+                    </div>
+                    <div class="modal" id="modal-8">8 уровень
+                        <p class="text" id="text-8"></p>
+                    </div>
+                    <div class="modal" id="modal-9">9 уровень
+                        <p class="text" id="text-9"></p>
+                    </div>
+                    <div class="modal" id="modal-10">10 уровень
+                        <p class="text" id="text-10"></p>
+                    </div>
+                </div>
+
+                <div class="block-modal">
+                    <div class="modal" id="modal-11">11 уровень
+                        <p class="text" id="text-11"></p>
+                    </div>
+                    <div class="modal" id="modal-12">12 уровень
+                        <p class="text" id="text-12"></p>
+                    </div>
+                    <div class="modal" id="modal-13">13 уровень
+                        <p class="text" id="text-13"></p>
+                    </div>
+                    <div class="modal" id="modal-14">14 уровень
+                        <p class="text" id="text-14"></p>
+                    </div>
+                    <div class="modal" id="modal-15">15 уровень
+                        <p class="text" id="text-15"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="content-footer">
+                <div class="startOver" id="startOver">
+                    <span>Начать заново</span>
+                </div>
+                <span class="author">Klimashevskiy VP</span>
+            </div>
+        </footer>
+
+
+        <!-- обертка для модального окна -->
+        <div class="modal-block"></div>
+        <div class="overlay"></div>
+        <!-- //обертка для модального окна -->
+
+
+        <!-- контент модальных окон -->
+        <div class='content-modal-block'>
+            <div class="modal_content" id="modal-1_content">
+                <h1 class='header-level'>1 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="num" id="level-num1"></span>
+                        <span class="operator" id='operator'>+</span>
+                        <span class="num" id="level-num2"></span>
+                        <span class="operator" id='operator'>=</span>
+                        <input type="text" class="res" id="level-res1">
+                    </div>
+                    <button class="btn-level" id='ok-level-1'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-2_content">
+                <h1 class='header-level'>2 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="num" id="level_2-num1"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_2-num2"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_2-num3"></span>
+                        <span class="operator">=</span>
+                        <input type="text" class="res" id="level-res2">
+                    </div>
+                    <button class="btn-level" id='ok-level-2'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-3_content">
+                <h1 class='header-level'> 3 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="num" id="level_3-num1"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_3-num2"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_3-num3"></span>
+                        <span class="num" id="level_3-num4"></span>
+                        <span class="operator">=</span>
+                        <input type="text" class="res" id="level-res3">
+                    </div>
+                    <button class="btn-level" id='ok-level-3'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-4_content">
+                <h1 class='header-level'> 4 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="operator">(</span>
+                        <span class="num" id="level_4-num1"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_4-num2"></span>
+                        <span class="operator">)</span>
+                        <span class="operator">-</span>
+                        <span class="operator">(</span>
+                        <span class="num" id="level_4-num3"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_4-num4"></span>
+                        <span class="operator">)</span>
+                        <span class="operator">=</span>
+                        <input type="text" class="res" id="level-res4">
+                    </div>
+
+                    <button class="btn-level" id='ok-level-4'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-5_content">
+                <h1 class='header-level'> 5 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="operator">(</span>
+                        <span class="num" id="level_5-num1"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_5-num2"></span>
+                        <span class="operator">)</span>
+                        <span class="operator">+</span>
+                        <span class="operator">(</span>
+                        <span class="num" id="level_5-num3"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_5-num4"></span>
+                        <span class="operator">)</span>
+                        <span class="operator">=</span>
+                        <input type="text" class="res" id="level-res5">
+                    </div>
+
+                    <button class="btn-level" id='ok-level-5'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-6_content">
+                <h1 class='header-level'> 6 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="num" id="level_6-num1"></span>
+                        <span class="operator">*</span>
+                        <span class="num" id="level_6-num2"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_6-num3"></span>
+                        <span class="operator">*</span>
+                        <span class="num" id="level_6-num4"></span>
+                        <span class="operator">=</span>
+                        <input type="number" class="res" id="level-res6">
+                    </div>
+                    <button class="btn-level" id='ok-level-6'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-7_content">
+                <h1 class='header-level'> 7 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="num" id="level_7-num1"></span>
+                        <span class="operator">*</span>
+                        <span class="num" id="level_7-num2"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_7-num3"></span>
+                        <span class="operator">*</span>
+                        <span class="num" id="level_7-num4"></span>
+                        <span class="operator">=</span>
+                        <input type="text" class="res" id="level-res7">
+                    </div>
+                    <button class="btn-level" id='ok-level-7'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-8_content">
+                <h1 class='header-level'> 8 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="num" id="level_8-num1"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_8-num2"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_8-num3"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_8-num4"></span>
+                        <span class="operator">=</span>
+                        <input type="text" class="res" id="level-res8">
+                    </div>
+                    <button class="btn-level" id='ok-level-8'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-9_content">
+                <h1 class='header-level'> 9 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="num" id="level_9-num1"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_9-num2"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_9-num3"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_9-num4"></span>
+                        <span class="operator">=</span>
+                        <input type="text" class="res" id="level-res9">
+
+                    </div>
+                    <button class="btn-level" id='ok-level-9'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-10_content">
+                <h1 class='header-level'> 10 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="num" id="level_10-num1"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_10-num2"></span>
+                        <span class="operator">+</span>
+                        <span class="operator">(</span>
+                        <span class="num" id="level_10-num3"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_10-num4"></span>
+                        <span class="operator">)</span>
+                        <span class="operator">=</span>
+                        <input type="text" class="res" id="level-res10">
+                    </div>
+                    <button class="btn-level" id='ok-level-10'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-11_content">
+                <h1 class='header-level'> 11 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="num" id="level_11-num1"></span>
+                        <span class="operator">*</span>
+                        <span class="num" id="level_11-num2"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_11-num3"></span>
+                        <span class="operator">*</span>
+                        <span class="num" id="level_11-num4"></span>
+                        <span class="operator">=</span>
+                        <input type="text" class="res" id="level-res11">
+                    </div>
+                    <button class="btn-level" id='ok-level-11'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-12_content">
+                <h1 class='header-level'> 12 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="num" id="level_12-num1"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_12-num2"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_12-num3"></span>
+                        <span class="operator">*</span>
+                        <span class="num" id="level_12-num4"></span>
+                        <span class="operator">=</span>
+                        <input type="text" class="res" id="level-res12">
+                    </div>
+                    <button class="btn-level" id='ok-level-12'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-13_content">
+                <h1 class='header-level'> 13 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="num" id="level_13-num1"></span>
+                        <span class="operator">*</span>
+                        <span class="num" id="level_13-num2"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_13-num3"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_13-num4"></span>
+                        <span class="operator">=</span>
+                        <input type="text" class="res" id="level-res13">
+                    </div>
+                    <button class="btn-level" id='ok-level-13'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-14_content">
+                <h1 class='header-level'> 14 уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="num" id="level_14-num1"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_14-num2"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_14-num3"></span>
+                        <span class="operator">*</span>
+                        <span class="num" id="level_14-num4"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_14-num5"></span>
+                        <span class="operator">=</span>
+                        <input type="text" class="res" id="level-res14">
+                    </div>
+                    <button class="btn-level" id='ok-level-14'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-15_content">
+                <h1 class='header-level'> 15-й уровень</h1>
+                <div class="block-level">
+                    <div class="modal-block-content">
+                        <span class="num" id="level_15-num1"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_15-num2"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_15-num3"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_15-num4"></span>
+                        <span class="operator">-</span>
+                        <span class="num" id="level_15-num5"></span>
+                        <span class="operator">+</span>
+                        <span class="num" id="level_15-num6"></span>
+                        <span class="operator">=</span>
+                        <input type="text" class="res" id="level-res15">
+                    </div>
+                    <button class="btn-level" id='ok-level-15'> ok </button>
+                    <p class="result" id="result"> </p>
+                </div>
+            </div>
+            <div class="modal_content" id="continueTheGame">
+                <h3 class='header-level'> Вы точно уверены что хотите начать заново?</h3>
+                <div class="block-level">
+                    <div class="btn-block">
+                        <button class="btn-modal" id="next-game"> Продолжить </button>
+                        <button class="btn-modal" id="start-over"> Начать заново</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-Success">
+                <h4 class='header-level success'> Поздравляем!!!</h4>
+                <div class="success-block">
+                    <p class="success-text">УРА!!!! Вы выиграли !!!!</p>
+                    <div class="btn-success" id="start-over"> Начать заново </div>
+                </div>
+            </div>
+            <div class="modal_content" id="modal-Error">
+                <div class="err-content">
+                    <h1 class='header-level'> Закончилось время!!!</h1>
+                    <p class="err-text"> Попробуй еще раз!!!!</p>
+                    <button class="btn-modal " id="start-over"> Начать заново </button>
+                </div>
+            </div>
+        </div>
+        <!-- контент модальных окон -->
+    </div>
+
+
+    <script src="counting.js"></script>
+</body>
+
+</html>
